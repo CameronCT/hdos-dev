@@ -311,10 +311,10 @@
             function getRequestAndUpdate() {
                 var xmlHttp = new XMLHttpRequest();
                 var url = "https://discordapp.com/api/guilds/710260015914680350/widget.json";
-                xmlHttp.open("GET", url, false ); // false for synchronous request
-                xmlHttp.send( null );
-                var data = JSON.parse(xmlHttp.responseText);
-                if (data !== 'undefined') {
+                xmlHttp.open("GET", url, false);
+                xmlHttp.send(null);
+                if (xmlHttp.status === 200) {
+                    var data = JSON.parse(xmlHttp.responseText);
                     document.getElementById("userCount").innerHTML = `${data.presence_count}`;
                 }
             }
