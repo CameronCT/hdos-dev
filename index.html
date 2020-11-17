@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+        <meta
+                name="description"
+                content="Web site created"
+        />
+        <title>HDOS - Upcoming HD client for Oldschool Runescape!</title>
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
+        <style>
+            .cover-bg {
+                background-image: url('cover.png');
+                background-size: cover;
+                background-color: #000;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="navigationMenu" class="z-50 fixed top-0 w-full bg-opacity-75 transition ease-in-out duration-200">
+            <div class="container mx-auto">
+                <div class="flex flex-wrap">
+                    <div class="w-40 my-auto text-center">
+                        <a href="/" class="uppercase font-medium tracking-widest text-base text-white hover:text-gray-400">About Us</a>
+                    </div>
+                    <div class="w-40 my-auto text-center">
+                        <a href="/" class="uppercase font-medium tracking-widest text-base text-white hover:text-gray-400">Contact</a>
+                    </div>
+                    <div class="w-32 mx-auto text-center">
+                        <img src="logo.png" alt="hdos logo" class="w-full h-auto" />
+                    </div>
+                    <div class="w-40 my-auto text-center">
+                        <a href="/" class="uppercase font-medium tracking-widest text-base text-white hover:text-gray-400">Apply</a>
+                    </div>
+                    <div class="w-40 my-auto text-center">
+                        <a href="/" class="uppercase font-medium tracking-widest text-base text-white hover:text-gray-400">Discord</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="cover-bg flex h-screen">
+            <div class="container m-auto">
+                <div class="flex">
+                    <div class="w-5/12">
+                        <div class="block relative h-0 p-0" style="padding-bottom: 56.25%;">
+                            <iframe class="absolute w-full h-full border-4 border-orange-900 border-opacity-50" src="https://www.youtube.com/embed/hLDQKxZCaUs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="w-7/12 my-auto">
+                        <div class="text-center">
+                            <div class="uppercase text-4xl font-bold tracking-wider text-white">The <span class="text-red-700">Nostalgia</span> Awaits</div>
+                            <div class="text-base leading-loose pt-6 px-24 font-semibold text-white uppercase">
+                                HDOS <span class="italic">(High Definition Old School)</span> is a community project to help improve the graphics of Old School Runescape while maintaining its original charm.
+                            </div>
+
+                            <div class="text-base leading-loose pt-6 px-24 font-semibold text-white uppercase">
+                                Join our growing community of over <span class="text-red-700">1,000</span> members for the latest updates!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="py-16 bg-black">
+            test
+        </div>
+
+        <script>
+            window.addEventListener('scroll', function (e) {
+                var nav = document.getElementById('navigationMenu');
+                if (document.documentElement.scrollTop || document.body.scrollTop > window.innerHeight) {
+                    nav.classList.add('bg-black');
+                    nav.classList.remove('bg-transparent');
+                } else {
+                    nav.classList.add('bg-transparent');
+                    nav.classList.remove('bg-black');
+                }
+            });
+        </script>
+    </body>
+</html>
