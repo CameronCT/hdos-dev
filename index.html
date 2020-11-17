@@ -15,30 +15,30 @@
 
         <style>
             .cover-bg {
-                background-image: url('cover.png');
+                background-image: url('cover-3.png');
                 background-size: cover;
                 background-color: #000;
             }
         </style>
     </head>
-    <body>
+    <body class="bg-black">
         <div id="navigationMenu" class="z-50 fixed top-0 w-full bg-opacity-75 transition ease-in-out duration-200">
             <div class="container mx-auto">
                 <div class="flex flex-wrap">
-                    <div class="w-40 my-auto text-center">
-                        <a href="/" class="uppercase font-medium tracking-widest text-base text-white hover:text-gray-400">About Us</a>
+                    <div class="ml-auto w-40 my-auto text-center">
+                        <a href="" class="uppercase font-medium tracking-widest text-base text-white hover:text-gray-400">Apply Now</a>
                     </div>
-                    <div class="w-40 my-auto text-center">
-                        <a href="/" class="uppercase font-medium tracking-widest text-base text-white hover:text-gray-400">Contact</a>
+                    <div class="ml-auto w-40 my-auto text-center">
+                        <a href="" class="uppercase font-medium tracking-widest text-base text-white hover:text-gray-400">FAQ</a>
                     </div>
                     <div class="w-32 mx-auto text-center">
                         <img src="logo.png" alt="hdos logo" class="w-full h-auto" />
                     </div>
-                    <div class="w-40 my-auto text-center">
-                        <a href="/" class="uppercase font-medium tracking-widest text-base text-white hover:text-gray-400">Apply</a>
+                    <div class="mr-auto w-40 my-auto text-center">
+                        <a href="/" class="uppercase font-medium tracking-widest text-base text-white hover:text-gray-400">Gallery</a>
                     </div>
-                    <div class="w-40 my-auto text-center">
-                        <a href="/" class="uppercase font-medium tracking-widest text-base text-white hover:text-gray-400">Discord</a>
+                    <div class="mr-auto w-40 my-auto text-center">
+                        <a href="/" class="uppercase font-medium tracking-widest text-base text-white hover:text-gray-400">Follow Us</a>
                     </div>
                 </div>
 
@@ -47,30 +47,150 @@
 
         <div class="cover-bg flex h-screen">
             <div class="container m-auto">
-                <div class="flex">
-                    <div class="w-5/12">
-                        <div class="block relative h-0 p-0" style="padding-bottom: 56.25%;">
-                            <iframe class="absolute w-full h-full border-4 border-orange-900 border-opacity-50" src="https://www.youtube.com/embed/hLDQKxZCaUs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                    <div class="w-7/12 my-auto">
+                <div class="flex justify-center">
+                    <div class="w-7/12">
                         <div class="text-center">
-                            <div class="uppercase text-4xl font-bold tracking-wider text-white">The <span class="text-red-700">Nostalgia</span> Awaits</div>
+                            <div class="uppercase text-5xl font-bold tracking-wider text-white">The <span class="text-red-700">Nostalgia</span> Awaits</div>
                             <div class="text-base leading-loose pt-6 px-24 font-semibold text-white uppercase">
-                                HDOS <span class="italic">(High Definition Old School)</span> is a community project to help improve the graphics of Old School Runescape while maintaining its original charm.
+                                HDOS <span class="italic">(High Detail Old School)</span> is a community project to help restore the high detail graphics of Runescape while maintaining its original charm.
                             </div>
 
-                            <div class="text-base leading-loose pt-6 px-24 font-semibold text-white uppercase">
-                                Join our growing community of over <span class="text-red-700">1,000</span> members for the latest updates!
+                            <div class="mt-16">
+                                <a href="/" class="border-indigo-500 border-2 p-3 text-indigo-500 hover:bg-indigo-500 hover:text-white uppercase tracking-wide rounded transition ease-in-out duration-200">
+                                    <i class="fab fa-discord mx-1"></i>
+                                    <span class="font-semibold">
+                                        Join Discord (<span id="userCount">0</span> members)
+                                    </span>
+                                </a>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute w-full bottom-0 pb-10 text-center uppercase tracking-widest text-lg">
+                <a href="#apply" class="text-gray-400 hover:text-gray-500 transition ease-in-out duration-200">
+                    <i class="fas fa-angle-double-down"></i>
+                    <span class="font-semibold">Scroll to Apply</span>
+                </a>
+            </div>
+        </div>
+
+        <div id="apply" class="bg-gray-900 bg-opacity-25">
+            <div class="py-16 w-1/2 mx-auto">
+                <div class="text-center">
+                    <div class="uppercase text-4xl text-white font-bold tracking-widest">Closed Beta</div>
+                    <div class="my-6 border-b border-gray-300 w-32 mx-auto"></div>
+                    <div class="text-lg text-gray-300 font-medium tracking-wider leading-relaxed">
+                        We are looking for a small group of dedicated and passionate scapers to battle test our client! If you are interested in helping us get to the next step of our goal, you can apply to be a beta tester! Your goal will be to break things and find any inconsistencies in the games mechanics. Bugs and problems you find now are things other people will not have to experience.
+                    </div>
+                    <div class="text-center mt-8">
+                        <a href="/" class="rounded p-3 border-2 border-red-900 text-red-800 uppercase font-semibold tracking-wider hover:bg-red-900 hover:text-white">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="faq" class="bg-gray-900 bg-opacity-75">
+            <div class="py-16 w-1/2 mx-auto">
+                <div class="text-center">
+                    <div class="uppercase text-4xl text-white font-bold tracking-widest">Frequently Asked Questions</div>
+                    <div class="my-6 border-b border-gray-300 w-32 mx-auto"></div>
+                </div>
+                <div>
+                    <div class="flex flex-wrap">
+                        <div class="w-full p-2">
+                            <div class="p-4 text-sm bg-black bg-opacity-25">
+                                <div class="font-semibold text-white tracking-wide pb-1">How can I use the HD client?</div>
+                                <div class="text-white">Currently, the client is in closed beta, meaning only a limited amount of people may use it. We are seeking dedicated users that understand there will be some issues and not only take the time to report them but assist in reproducing and resolving them. If you would like a chance, submit an application today!</div>
+                            </div>
+                        </div>
+
+                        <div class="w-full p-2">
+                            <div class="p-4 text-sm bg-black bg-opacity-25">
+                                <div class="font-semibold text-white tracking-wide pb-1">Will this client have plugins like RuneLite?</div>
+                                <div class="text-white">Yes, once most of the graphical bugs are cleaned up, and we have spent some time cleaning up the client code. Then we will be able to wrap this in RuneLite, and offer all of the plugins that are known, and loved.</div>
+                            </div>
+                        </div>
+
+                        <div class="w-full p-2">
+                            <div class="p-4 text-sm bg-black bg-opacity-25">
+                                <div class="font-semibold text-white tracking-wide pb-1">Will it have the plugins from their hub?</div>
+                                <div class="text-white">There will be no external plugins to start, or possibly ever. If a plugin is deemed needed by the community, we could always add it.</div>
+                            </div>
+                        </div>
+
+                        <div class="w-full p-2">
+                            <div class="p-4 text-sm bg-black bg-opacity-25">
+                                <div class="font-semibold text-white tracking-wide pb-1">Why is the client closed source?</div>
+                                <div class="text-white">Due to methods used to communicate with servers we can assume Jagex would prefer our client be closed until they make contact with us. We are willing to provide binaries or information to anyone wishing to audit.</div>
+                            </div>
+                        </div>
+
+                        <div class="w-full p-2">
+                            <div class="p-4 text-sm bg-black bg-opacity-25">
+                                <div class="font-semibold text-white tracking-wide pb-1">Will I get banned for using this client?</div>
+                                <div class="text-white">The safe answer is, we don’t know. So far, there have been no bans in over 5 months. We’re confident there will not be any, but the only way to know for sure is to have rigorous testing by our beta users.</div>
+                            </div>
+                        </div>
+
+                        <div class="w-full p-2">
+                            <div class="p-4 text-sm bg-black bg-opacity-25">
+                                <div class="font-semibold text-white tracking-wide pb-1">Have you contacted Jagex?</div>
+                                <div class="text-white">Yes, sadly with no reply just yet.</div>
+                            </div>
+                        </div>
+
+                        <div class="w-full p-2">
+                            <div class="p-4 text-sm bg-black bg-opacity-25">
+                                <div class="font-semibold text-white tracking-wide pb-1">You’re using ‘stolen assets’ surely Jagex will shut this down like other HD clients? </div>
+                                <div class="text-white">The only other ‘HD’ client to get taken down to our knowledge was ‘OSHD’. We can only speculate but believe it was shut down due to the developers not willing to comply with Jagex and releasing their code to them. That project also communicated with Jagex servers in a different manner to ours which we believe resulted in a number of bans. At the end of the day, we’re working on this project, this question is based from assumptions, and nobody will know until Jagex get in touch.</div>
+                            </div>
+                        </div>
+
+                        <div class="w-full p-2">
+                            <div class="p-4 text-sm bg-black bg-opacity-25">
+                                <div class="font-semibold text-white tracking-wide pb-1">Is there a release date for HDOS?</div>
+                                <div class="text-white">Not currently, we are in closed beta for testing. If all goes well, we're looking at mid 2021.</div>
+                            </div>
+                        </div>
+
+                        <div class="w-full p-2">
+                            <div class="text-gray-300 text-sm uppercase font-semibold">Have any more questions? Let us know on Discord.</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="py-16 bg-black">
-            test
+        <div id="follow" class="bg-gray-900 bg-opacity-50">
+            <div class="py-16 w-1/2 mx-auto">
+                <div class="text-center">
+                    <div class="uppercase text-4xl text-white font-bold tracking-widest">Follow Us</div>
+                    <div class="my-6 border-b border-gray-300 w-32 mx-auto"></div>
+                    <div class="flex flex-wrap py-16">
+                        <div class="w-1/4">
+                            <a href="" class="text-white hover:text-indigo-500">
+                                <i class="fab fa-discord fa-5x"></i>
+                            </a>
+                        </div>
+                        <div class="w-1/4">
+                            <a href="" class="text-white hover:text-blue-700">
+                                <i class="fab fa-twitter fa-5x"></i>
+                            </a>
+                        </div>
+                        <div class="w-1/4">
+                            <a href="" class="text-white hover:text-purple-500">
+                                <i class="fab fa-twitch fa-5x"></i>
+                            </a>
+                        </div>
+                        <div class="w-1/4">
+                            <a href="" class="text-white hover:text-red-700">
+                                <i class="fab fa-youtube fa-5x"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <script>
@@ -84,6 +204,18 @@
                     nav.classList.remove('bg-black');
                 }
             });
+
+            function getRequestAndUpdate() {
+                var xmlHttp = new XMLHttpRequest();
+                var url = "https://discordapp.com/api/guilds/710260015914680350/widget.json";
+                xmlHttp.open("GET", url, false ); // false for synchronous request
+                xmlHttp.send( null );
+                var data = JSON.parse(xmlHttp.responseText);
+                if (data !== 'undefined') {
+                    document.getElementById("userCount").innerHTML = `${data.presence_count}`;
+                }
+            }
+            getRequestAndUpdate();
         </script>
     </body>
 </html>
