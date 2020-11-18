@@ -1,15 +1,23 @@
 import React, { Component } from 'react';
 import Footer from "../../footer/Footer";
 import LandingNav from "../../navigation/LandingNav";
+import FAQJson from "../../../data/faq.json";
 
 interface IState {
     discordMembers: number;
+    faq: FAQData[];
+}
+
+interface FAQData {
+    question: string;
+    answer: string;
 }
 
 class Landing extends Component {
 
     state:IState = {
-        discordMembers: 0
+        discordMembers: 0,
+        faq: FAQJson
     }
 
     componentDidMount() {
@@ -26,7 +34,7 @@ class Landing extends Component {
 
     render() {
 
-        const { discordMembers } = this.state;
+        const { discordMembers, faq } = this.state;
 
         return (
             <div>
@@ -66,7 +74,7 @@ class Landing extends Component {
                     <div className="absolute w-full bottom-0 pb-10 text-center uppercase tracking-widest text-lg">
                         <a href="#apply"
                            className="text-gray-400 hover:text-gray-500 transition ease-in-out duration-200">
-                            <i className="fas fa-angle-double-down" />
+                            <i className="fas fa-angle-double-down mr-2" />
                             <span className="font-semibold">Scroll to Apply</span>
                         </a>
                     </div>
@@ -107,107 +115,14 @@ class Landing extends Component {
                         </div>
                         <div>
                             <div className="flex flex-wrap reveal">
-                                <div className="w-full p-2">
-                                    <div className="p-4 text-sm bg-black bg-opacity-25">
-                                        <div className="font-semibold text-white tracking-wide pb-1">How can I use the
-                                            HD client?
-                                        </div>
-                                        <div className="text-white">Currently, the client is in closed beta, meaning
-                                            only a limited amount of people may use it. We are seeking dedicated users
-                                            that understand there will be some issues and not only take the time to
-                                            report them but assist in reproducing and resolving them. If you would like
-                                            a chance, submit an application today!
+                                {faq.map((item) => (
+                                    <div key={item.question} className="w-full p-2">
+                                        <div className="p-4 text-sm bg-black bg-opacity-25">
+                                            <div className="font-semibold text-white tracking-wide pb-1">{item.question}</div>
+                                            <div className="text-white">{item.answer}</div>
                                         </div>
                                     </div>
-                                </div>
-
-                                <div className="w-full p-2">
-                                    <div className="p-4 text-sm bg-black bg-opacity-25">
-                                        <div className="font-semibold text-white tracking-wide pb-1">Will this client
-                                            have plugins like RuneLite?
-                                        </div>
-                                        <div className="text-white">Yes, once most of the graphical bugs are cleaned up,
-                                            and we have spent some time cleaning up the client code. Then we will be
-                                            able to wrap this in RuneLite, and offer all of the plugins that are known,
-                                            and loved.
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="w-full p-2">
-                                    <div className="p-4 text-sm bg-black bg-opacity-25">
-                                        <div className="font-semibold text-white tracking-wide pb-1">Will it have the
-                                            plugins from their hub?
-                                        </div>
-                                        <div className="text-white">There will be no external plugins to start, or
-                                            possibly ever. If a plugin is deemed needed by the community, we could
-                                            always add it.
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="w-full p-2">
-                                    <div className="p-4 text-sm bg-black bg-opacity-25">
-                                        <div className="font-semibold text-white tracking-wide pb-1">Why is the client
-                                            closed source?
-                                        </div>
-                                        <div className="text-white">Due to methods used to communicate with servers we
-                                            can assume Jagex would prefer our client be closed until they make contact
-                                            with us. We are willing to provide binaries or information to anyone wishing
-                                            to audit.
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="w-full p-2">
-                                    <div className="p-4 text-sm bg-black bg-opacity-25">
-                                        <div className="font-semibold text-white tracking-wide pb-1">Will I get banned
-                                            for using this client?
-                                        </div>
-                                        <div className="text-white">The safe answer is, we don’t know. So far, there
-                                            have been no bans in over 5 months. We’re confident there will not be any,
-                                            but the only way to know for sure is to have rigorous testing by our beta
-                                            users.
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="w-full p-2">
-                                    <div className="p-4 text-sm bg-black bg-opacity-25">
-                                        <div className="font-semibold text-white tracking-wide pb-1">Have you contacted
-                                            Jagex?
-                                        </div>
-                                        <div className="text-white">Yes, sadly with no reply just yet.</div>
-                                    </div>
-                                </div>
-
-                                <div className="w-full p-2">
-                                    <div className="p-4 text-sm bg-black bg-opacity-25">
-                                        <div className="font-semibold text-white tracking-wide pb-1">You’re using
-                                            ‘stolen assets’ surely Jagex will shut this down like other HD clients?
-                                        </div>
-                                        <div className="text-white">The only other ‘HD’ client to get taken down to our
-                                            knowledge was ‘OSHD’. We can only speculate but believe it was shut down due
-                                            to the developers not willing to comply with Jagex and releasing their code
-                                            to them. That project also communicated with Jagex servers in a different
-                                            manner to ours which we believe resulted in a number of bans. At the end of
-                                            the day, we’re working on this project, this question is based from
-                                            assumptions, and nobody will know until Jagex get in touch.
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="w-full p-2">
-                                    <div className="p-4 text-sm bg-black bg-opacity-25">
-                                        <div className="font-semibold text-white tracking-wide pb-1">Is there a release
-                                            date for HDOS?
-                                        </div>
-                                        <div className="text-white">Not currently, we are in closed beta for testing. If
-                                            all goes well, we are looking at mid 2021.
-                                        </div>
-                                    </div>
-                                </div>
-
+                                ))}
                                 <div className="w-full p-2">
                                     <div className="text-gray-300 text-sm uppercase font-semibold">Have any more
                                         questions? Let us know on Discord.

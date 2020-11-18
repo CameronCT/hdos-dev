@@ -20,24 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d98931a-7577-408d-b300-b9167aa19eee" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/footer/Footer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/navigation/LandingNav.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pages/landing/Landing.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android-chrome-192x192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android-chrome-512x512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apple-touch-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/browserconfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cover-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/favicon-16x16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/favicon-32x32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mstile-150x150.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/safari-pinned-tab.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/site.webmanifest" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/faq.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/landing/Landing.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/landing/Landing.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +66,7 @@
       <workItem from="1605584878892" duration="13794000" />
       <workItem from="1605635873670" duration="977000" />
       <workItem from="1605649669608" duration="828000" />
-      <workItem from="1605674341237" duration="1867000" />
+      <workItem from="1605674341237" duration="2382000" />
     </task>
     <servers />
   </component>
