@@ -42,7 +42,7 @@ class Landing extends Component {
 
     render() {
 
-        const { discordMembers, faq, gallery } = this.state;
+        const { faq, gallery } = this.state;
 
         return (
             <div>
@@ -68,11 +68,8 @@ class Landing extends Component {
                                            className="border-indigo-500 border-2 p-3 text-indigo-500 hover:bg-indigo-500 hover:text-white uppercase tracking-wide rounded transition ease-in-out duration-200">
                                             <i className="fab fa-discord mx-1" />
                                             <span className="font-semibold">
-                                        Join Discord
-                                        <span className="hidden lg:inline pl-1">
-                                            ({discordMembers} members)
-                                        </span>
-                                    </span>
+                                                Join our Discord
+                                            </span>
                                         </a>
                                     </div>
                                 </div>
