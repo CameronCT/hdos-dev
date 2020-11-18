@@ -103,7 +103,7 @@ class Landing extends Component {
                                 people will not have to experience.
                             </div>
                             <div className="text-center mt-8 reveal">
-                                <a href="https://forms.gle/YmNJfKTJVuaof3J16" rel="noopener noreferrer" target="_blank" className="px-6 py-2 border-b-2 bg-black bg-opacity-25 hover:bg-opacity-50 border-red-800 text-red-800 uppercase font-semibold tracking-wider transition ease-in-out duration-200 reveal">
+                                <a href="https://forms.gle/YmNJfKTJVuaof3J16" rel="noopener noreferrer" target="_blank" className="px-6 py-2 border-b-2 bg-red-900 bg-opacity-15 hover:bg-opacity-35 border-red-800 text-red-200 uppercase font-semibold tracking-wider transition ease-in-out duration-200 reveal">
                                     Apply Now
                                 </a>
                             </div>
