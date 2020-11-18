@@ -1,0 +1,15 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+body {
+    @apply bg-black;
+}
+
+.cover-bg {
+    background-image: url('../assets/cover-3.png');
+    background-size: cover;
+    background-color: #000;
+}
