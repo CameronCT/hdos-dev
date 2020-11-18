@@ -41,9 +41,8 @@ class Landing extends Component {
     }
 
     render() {
-
+        const Fade = require('react-reveal/Fade');
         const { faq, gallery } = this.state;
-
         return (
             <div>
                 <LandingNav />
@@ -88,22 +87,30 @@ class Landing extends Component {
                 <div id="apply" className="bg-gray-900 bg-opacity-50">
                     <div className="py-16 w-10/12 lg:w-2/5 mx-auto">
                         <div className="text-center">
-                            <div className="uppercase text-xl md:text-2xl lg:text-3xl xl:text-4xl text-white font-bold tracking-widest reveal">Closed
-                                Beta
-                            </div>
-                            <div className="my-6 border-b border-gray-300 w-32 mx-auto reveal"></div>
-                            <div className="text-sm lg:text-base text-gray-300 tracking-wider leading-relaxed reveal">
-                                We are looking for a small group of dedicated and passionate scapers to battle test our
-                                client! If you are interested in helping us get to the next step of our goal, you can
-                                apply to be a beta tester! Your goal will be to break things and find any
-                                inconsistencies in the games mechanics. Bugs and problems you find now are things other
-                                people will not have to experience.
-                            </div>
-                            <div className="text-center mt-8 reveal">
-                                <a href="https://forms.gle/YmNJfKTJVuaof3J16" rel="noopener noreferrer" target="_blank" className="px-6 py-2 border-b-2 bg-red-900 bg-opacity-15 hover:bg-opacity-35 border-red-800 text-red-200 uppercase font-semibold tracking-wider transition ease-in-out duration-200 reveal">
-                                    Apply Now
-                                </a>
-                            </div>
+                            <Fade>
+                                <div className="uppercase text-xl md:text-2xl lg:text-3xl xl:text-4xl text-white font-bold tracking-widest">Closed
+                                    Beta
+                                </div>
+                            </Fade>
+                            <Fade>
+                                <div className="my-6 border-b border-gray-300 w-32 mx-auto" />
+                            </Fade>
+                            <Fade>
+                                <div className="text-sm lg:text-base text-gray-300 tracking-wider leading-relaxed">
+                                    We are looking for a small group of dedicated and passionate scapers to battle test our
+                                    client! If you are interested in helping us get to the next step of our goal, you can
+                                    apply to be a beta tester! Your goal will be to break things and find any
+                                    inconsistencies in the games mechanics. Bugs and problems you find now are things other
+                                    people will not have to experience.
+                                </div>
+                            </Fade>
+                            <Fade>
+                                <div className="text-center mt-8">
+                                    <a href="https://forms.gle/YmNJfKTJVuaof3J16" rel="noopener noreferrer" target="_blank" className="px-6 py-2 border-b-2 bg-red-900 bg-opacity-15 hover:bg-opacity-35 border-red-800 text-red-200 uppercase font-semibold tracking-wider transition ease-in-out duration-200 reveal">
+                                        Apply Now
+                                    </a>
+                                </div>
+                            </Fade>
                         </div>
                     </div>
                 </div>
@@ -111,13 +118,17 @@ class Landing extends Component {
                 <div id="faq" className="bg-gray-900 bg-opacity-75">
                     <div className="py-16 w-10/12 md:w-8/12 lg:w-6/12 xl:w-2/5 mx-auto">
                         <div className="text-center">
-                            <div className="uppercase text-xl md:text-2xl lg:text-3xl xl:text-4xl text-white font-bold tracking-widest reveal">
-                                Frequently Asked Questions
-                            </div>
-                            <div className="my-6 border-b border-gray-300 w-32 mx-auto reveal" />
+                            <Fade>
+                                <div className="uppercase text-xl md:text-2xl lg:text-3xl xl:text-4xl text-white font-bold tracking-widest">
+                                    Frequently Asked Questions
+                                </div>
+                            </Fade>
+                            <Fade>
+                                <div className="my-6 border-b border-gray-300 w-32 mx-auto" />
+                            </Fade>
                         </div>
-                        <div>
-                            <div className="flex flex-wrap reveal">
+                        <Fade>
+                            <div className="flex flex-wrap">
                                 {faq.map((item) => (
                                     <div key={item.question} className="w-full p-2">
                                         <div className="p-4 text-sm bg-black bg-opacity-25">
@@ -132,24 +143,30 @@ class Landing extends Component {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </Fade>
                     </div>
                 </div>
 
                 <div id="gallery" className="bg-gray-900">
                     <div className="py-16 w-8/12 mx-auto">
                         <div className="text-center">
-                            <div
-                                className="uppercase text-xl md:text-2xl lg:text-3xl xl:text-4xl text-white font-bold tracking-widest reveal">Gallery
-                            </div>
-                            <div className="my-6 border-b border-gray-300 w-32 mx-auto reveal"></div>
+                            <Fade>
+                                <div
+                                    className="uppercase text-xl md:text-2xl lg:text-3xl xl:text-4xl text-white font-bold tracking-widest">Gallery
+                                </div>
+                            </Fade>
+                            <Fade>
+                                <div className="my-6 border-b border-gray-300 w-32 mx-auto" />
+                            </Fade>
                         </div>
                         <div>
-                            <div className="flex flex-wrap reveal">
+                            <div className="flex flex-wrap">
                                 {gallery.map((item) => (
-                                    <div className="w-1/2 lg:w-1/3 xl:w-1/4 p-2">
-                                        <img src={item.source} className="w-full h-auto border-4 border-gray-700" alt={item.name} />
-                                    </div>
+                                    <Fade>
+                                        <div className="w-1/2 lg:w-1/3 xl:w-1/4 p-2">
+                                            <img src={item.source} className="w-full h-auto border-4 border-gray-700" alt={item.name} />
+                                        </div>
+                                    </Fade>
                                 ))}
                             </div>
                         </div>
@@ -159,37 +176,43 @@ class Landing extends Component {
                 <div id="follow" className="bg-gray-900 bg-opacity-50">
                     <div className="py-16 w-3/4 lg:w-1/2 mx-auto">
                         <div className="text-center">
-                            <div
-                                className="uppercase text-xl md:text-2xl lg:text-3xl xl:text-4xl text-white font-bold tracking-widest reveal">Follow
-                                Us
-                            </div>
-                            <div className="my-6 border-b border-gray-300 w-32 mx-auto reveal"></div>
-                            <div className="flex flex-wrap py-8 reveal">
-                                <div className="w-1/2 lg:w-1/4 py-4">
-                                    <a href="https://discord.gg/Bw2WVFK" target={"_blank"} rel="noopener noreferrer"
-                                       className="text-white hover:text-indigo-500 transition ease-in-out duration-200">
-                                        <i className="fab fa-discord fa-3x" />
-                                    </a>
+                            <Fade>
+                                <div
+                                    className="uppercase text-xl md:text-2xl lg:text-3xl xl:text-4xl text-white font-bold tracking-widest">Follow
+                                    Us
                                 </div>
-                                <div className="w-1/2 lg:w-1/4 py-4">
-                                    <a href="https://twitter.com/HDOSdev" target={"_blank"} rel="noopener noreferrer"
-                                       className="text-white hover:text-blue-700 transition ease-in-out duration-200">
-                                        <i className="fab fa-twitter fa-3x"/>
-                                    </a>
+                            </Fade>
+                            <Fade>
+                                <div className="my-6 border-b border-gray-300 w-32 mx-auto" />
+                            </Fade>
+                            <Fade>
+                                <div className="flex flex-wrap py-8">
+                                    <div className="w-1/2 lg:w-1/4 py-4">
+                                        <a href="https://discord.gg/Bw2WVFK" target={"_blank"} rel="noopener noreferrer"
+                                           className="text-white hover:text-indigo-500 transition ease-in-out duration-200">
+                                            <i className="fab fa-discord fa-3x" />
+                                        </a>
+                                    </div>
+                                    <div className="w-1/2 lg:w-1/4 py-4">
+                                        <a href="https://twitter.com/HDOSdev" target={"_blank"} rel="noopener noreferrer"
+                                           className="text-white hover:text-blue-700 transition ease-in-out duration-200">
+                                            <i className="fab fa-twitter fa-3x"/>
+                                        </a>
+                                    </div>
+                                    <div className="w-1/2 lg:w-1/4 py-4">
+                                        <a href="https://www.twitch.tv/hdos_dev" target={"_blank"} rel="noopener noreferrer"
+                                           className="text-white hover:text-purple-500 transition ease-in-out duration-200">
+                                            <i className="fab fa-twitch fa-3x" />
+                                        </a>
+                                    </div>
+                                    <div className="w-1/2 lg:w-1/4 py-4">
+                                        <a href="https://www.youtube.com/channel/UCp9BYa5niyOMWcKthO9dR0A" target={"_blank"} rel="noopener noreferrer"
+                                           className="text-white hover:text-red-700 transition ease-in-out duration-200">
+                                            <i className="fab fa-youtube fa-3x" />
+                                        </a>
+                                    </div>
                                 </div>
-                                <div className="w-1/2 lg:w-1/4 py-4">
-                                    <a href="https://www.twitch.tv/hdos_dev" target={"_blank"} rel="noopener noreferrer"
-                                       className="text-white hover:text-purple-500 transition ease-in-out duration-200">
-                                        <i className="fab fa-twitch fa-3x" />
-                                    </a>
-                                </div>
-                                <div className="w-1/2 lg:w-1/4 py-4">
-                                    <a href="https://www.youtube.com/channel/UCp9BYa5niyOMWcKthO9dR0A" target={"_blank"} rel="noopener noreferrer"
-                                       className="text-white hover:text-red-700 transition ease-in-out duration-200">
-                                        <i className="fab fa-youtube fa-3x" />
-                                    </a>
-                                </div>
-                            </div>
+                            </Fade>
                         </div>
                     </div>
                 </div>
