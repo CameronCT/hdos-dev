@@ -3,6 +3,7 @@ import Footer from "../../footer/Footer";
 import LandingNav from "../../navigation/LandingNav";
 import FAQJson from "../../../data/faq.json";
 import GalleryJson from "../../../data/gallery.json";
+import { Fade } from "react-awesome-reveal";
 
 interface IState {
     discordMembers: number;
@@ -43,15 +44,14 @@ class Landing extends Component {
     }
 
     render() {
-        const Fade = require('react-reveal/Fade');
         const { faq, gallery, carousel } = this.state;
         return (
             <div>
                 {carousel && carousel !== 'null' && (
-                    <div style={{ zIndex: '100' }} className={"fixed z-50 flex w-full h-screen m-auto bg-black bg-opacity-75"}>
+                    <div style={{ zIndex: 100 }} className={"fixed z-50 flex w-full h-screen m-auto bg-black bg-opacity-75"}>
                         <div className={"max-w-screen-md m-auto"}>
                             <div className={"relative"}>
-                                <img src={carousel} className="border-8 border-gray-600" alt={"carousel zoom image"} />
+                                <img src={carousel} className="border-8 border-gray-600" alt={"carousel zoom"} />
                                 <button type={"button"} className={"absolute top-0 right-0 mt-4 mr-4 py-1 px-3 bg-red-900 hover:bg-opacity-75 transtion ease-in-out duration-200 text-white rounded"} onClick={() => { this.setState({ carousel: null }) }}>
                                     <i className={"fas fa-times"} /> <span className={"uppercase font-medium"}>Close</span>
                                 </button>
@@ -151,15 +151,14 @@ class Landing extends Component {
                         <Fade>
                             <div className="flex flex-wrap">
                                 {faq.map((item) => (
-                                    <Fade>
-                                        <div key={item.question} className="w-full p-2">
+                                    <div key={item.question} className="w-full p-2">
+                                        <Fade>
                                             <div className="p-4 text-sm bg-black bg-opacity-25">
                                                 <div className="font-semibold text-white tracking-wide pb-1">{item.question}</div>
                                                 <div className="text-white">{item.answer}</div>
                                             </div>
-                                        </div>
-                                    </Fade>
-
+                                        </Fade>
+                                    </div>
                                 ))}
                                 <Fade>
                                     <div className="w-full p-2">
@@ -188,13 +187,13 @@ class Landing extends Component {
                         <div>
                             <div className="flex flex-wrap">
                                 {gallery.map((item) => (
-                                    <Fade>
-                                        <div className="w-1/2 lg:w-1/3 xl:w-1/4 p-2">
+                                    <div key={item.name} className="w-1/2 lg:w-1/3 xl:w-1/4 p-2">
+                                        <Fade>
                                             <button type={"button"} className={"focus:outline-none"} onClick={() => this.setState({ carousel: item.source })}>
                                                 <img src={item.source} className="w-full h-auto border-4 border-gray-700" alt={item.name} />
                                             </button>
-                                        </div>
-                                    </Fade>
+                                        </Fade>
+                                    </div>
                                 ))}
                             </div>
                         </div>
