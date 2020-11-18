@@ -51,37 +51,44 @@ class Landing extends Component {
                         <div className="flex justify-center">
                             <div className="w-full lg:w-10/12 xl:w-7/12">
                                 <div className="text-center">
-                                    <div
-                                        className="uppercase text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-wider text-white">The <span
-                                        className="text-red-700">Nostalgia</span> Awaits
-                                    </div>
-                                    <div
-                                        className="text-sm xl:text-base leading-loose pt-6 px-6 md:px-12 lg:px-24 font-semibold text-white uppercase">
-                                        HDOS is a community project that is restoring the high detail graphics of
-                                        Runescape while maintaining its original charm.
-                                    </div>
-
-                                    <div className="mt-16">
-                                        <a href="https://discord.com/invite/Bw2WVFK" rel="noopener noreferrer"
-                                           target="_blank"
-                                           className="border-indigo-500 border-2 p-3 text-indigo-500 hover:bg-indigo-500 hover:text-white uppercase tracking-wide rounded transition ease-in-out duration-200">
-                                            <i className="fab fa-discord mx-1" />
-                                            <span className="font-semibold">
+                                    <Fade>
+                                        <div
+                                            className="uppercase text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-wider text-white">The <span
+                                            className="text-red-700">Nostalgia</span> Awaits
+                                        </div>
+                                    </Fade>
+                                    <Fade>
+                                        <div
+                                            className="text-sm xl:text-base leading-loose pt-6 px-6 md:px-12 lg:px-24 font-semibold text-white uppercase">
+                                            HDOS is a community project that is restoring the high detail graphics of
+                                            Runescape while maintaining its original charm.
+                                        </div>
+                                    </Fade>
+                                    <Fade>
+                                        <div className="mt-16">
+                                            <a href="https://discord.com/invite/Bw2WVFK" rel="noopener noreferrer"
+                                               target="_blank"
+                                               className="border-indigo-500 border-2 p-3 text-indigo-500 hover:bg-indigo-500 hover:text-white uppercase tracking-wide rounded transition ease-in-out duration-200">
+                                                <i className="fab fa-discord mr-2" />
+                                                <span className="font-semibold">
                                                 Join our Discord
                                             </span>
-                                        </a>
-                                    </div>
+                                            </a>
+                                        </div>
+                                    </Fade>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="absolute w-full bottom-0 pb-10 text-center uppercase tracking-widest text-lg">
-                        <a href="#apply"
-                           className="text-gray-400 hover:text-gray-500 transition ease-in-out duration-200">
-                            <i className="fas fa-angle-double-down mr-2" />
-                            <span className="font-semibold">Scroll to Apply</span>
-                        </a>
-                    </div>
+                    <Fade>
+                        <div className="absolute w-full bottom-0 pb-10 text-center uppercase tracking-widest text-lg">
+                            <a href="#apply"
+                               className="text-gray-400 hover:text-gray-500 transition ease-in-out duration-200">
+                                <i className="fas fa-angle-double-down mr-2" />
+                                <span className="font-semibold">Scroll to Apply</span>
+                            </a>
+                        </div>
+                    </Fade>
                 </div>
 
                 <div id="apply" className="bg-gray-900 bg-opacity-50">
