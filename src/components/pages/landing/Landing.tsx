@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import Footer from "../../footer/Footer";
 import LandingNav from "../../navigation/LandingNav";
 import FAQJson from "../../../data/faq.json";
+import GalleryJson from "../../../data/gallery.json";
 
 interface IState {
     discordMembers: number;
     faq: FAQData[];
+    gallery: GalleryData[];
 }
 
 interface FAQData {
@@ -13,11 +15,17 @@ interface FAQData {
     answer: string;
 }
 
+interface GalleryData {
+    name: string;
+    source: string;
+}
+
 class Landing extends Component {
 
     state:IState = {
         discordMembers: 0,
-        faq: FAQJson
+        faq: FAQJson,
+        gallery: GalleryJson
     }
 
     componentDidMount() {
@@ -34,7 +42,7 @@ class Landing extends Component {
 
     render() {
 
-        const { discordMembers, faq } = this.state;
+        const { discordMembers, faq, gallery } = this.state;
 
         return (
             <div>
@@ -83,8 +91,7 @@ class Landing extends Component {
                 <div id="apply" className="bg-gray-900 bg-opacity-50">
                     <div className="py-16 w-10/12 lg:w-2/5 mx-auto">
                         <div className="text-center">
-                            <div
-                                className="uppercase text-xl md:text-2xl lg:text-3xl xl:text-4xl text-white font-bold tracking-widest reveal">Closed
+                            <div className="uppercase text-xl md:text-2xl lg:text-3xl xl:text-4xl text-white font-bold tracking-widest reveal">Closed
                                 Beta
                             </div>
                             <div className="my-6 border-b border-gray-300 w-32 mx-auto reveal"></div>
@@ -96,9 +103,9 @@ class Landing extends Component {
                                 people will not have to experience.
                             </div>
                             <div className="text-center mt-8 reveal">
-                                <a href="https://forms.gle/YmNJfKTJVuaof3J16" rel="noopener noreferrer" target="_blank"
-                                   className="px-6 py-2 border-b-2 bg-black bg-opacity-25 hover:bg-opacity-50 border-red-800 text-red-800 uppercase font-semibold tracking-wider transition ease-in-out duration-200 reveal">Apply
-                                    Now</a>
+                                <a href="https://forms.gle/YmNJfKTJVuaof3J16" rel="noopener noreferrer" target="_blank" className="px-6 py-2 border-b-2 bg-black bg-opacity-25 hover:bg-opacity-50 border-red-800 text-red-800 uppercase font-semibold tracking-wider transition ease-in-out duration-200 reveal">
+                                    Apply Now
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -107,9 +114,8 @@ class Landing extends Component {
                 <div id="faq" className="bg-gray-900 bg-opacity-75">
                     <div className="py-16 w-10/12 md:w-8/12 lg:w-6/12 xl:w-2/5 mx-auto">
                         <div className="text-center">
-                            <div
-                                className="uppercase text-xl md:text-2xl lg:text-3xl xl:text-4xl text-white font-bold tracking-widest reveal">Frequently
-                                Asked Questions
+                            <div className="uppercase text-xl md:text-2xl lg:text-3xl xl:text-4xl text-white font-bold tracking-widest reveal">
+                                Frequently Asked Questions
                             </div>
                             <div className="my-6 border-b border-gray-300 w-32 mx-auto reveal" />
                         </div>
@@ -143,82 +149,11 @@ class Landing extends Component {
                         </div>
                         <div>
                             <div className="flex flex-wrap reveal">
-                                <div className="w-1/2 lg:w-1/3 xl:w-1/4 p-2">
-                                    <img
-                                        src="https://media.discordapp.net/attachments/771547475969835008/778300988867870740/Capture.PNG"
-                                        className="w-full h-auto border-4 border-gray-700" alt="gallery"/>
-                                </div>
-                                <div className="w-1/2 lg:w-1/3 xl:w-1/4 p-2">
-                                    <img
-                                        src="https://cdn.discordapp.com/attachments/733501465989218395/777388145528012820/4e05da1e2504b43946eec836335dd5b2.jpg"
-                                        className="w-full h-auto border-4 border-gray-700" alt="gallery"/>
-                                </div>
-                                <div className="w-1/2 lg:w-1/3 xl:w-1/4 p-2">
-                                    <img
-                                        src="https://cdn.discordapp.com/attachments/733501465989218395/769826743968071700/bDcpFo9KL.gif"
-                                        className="w-full h-auto border-4 border-gray-700" alt="gallery"/>
-                                </div>
-                                <div className="w-1/2 lg:w-1/3 xl:w-1/4 p-2">
-                                    <img src="https://i.imgur.com/MWQpBqi.jpg"
-                                         className="w-full h-auto border-4 border-gray-700" alt="gallery"/>
-                                </div>
-                                <div className="w-1/2 lg:w-1/3 xl:w-1/4 p-2">
-                                    <img
-                                        src="https://cdn.discordapp.com/attachments/733501465989218395/752461375229657088/lO6cNqwSIw.gif"
-                                        className="w-full h-auto border-4 border-gray-700" alt="gallery"/>
-                                </div>
-                                <div className="w-1/2 lg:w-1/3 xl:w-1/4 p-2">
-                                    <img src="https://i.imgur.com/i6wDxqn.jpg"
-                                         className="w-full h-auto border-4 border-gray-700" alt="gallery"/>
-                                </div>
-                                <div className="w-1/2 lg:w-1/3 xl:w-1/4 p-2">
-                                    <img
-                                        src="https://cdn.discordapp.com/attachments/733501465989218395/733505142225109022/unknown.png"
-                                        className="w-full h-auto border-4 border-gray-700" alt="gallery"/>
-                                </div>
-                                <div className="w-1/2 lg:w-1/3 xl:w-1/4 p-2">
-                                    <img
-                                        src="https://cdn.discordapp.com/attachments/733501465989218395/739752763247951932/XLXrX3V.png"
-                                        className="w-full h-auto border-4 border-gray-700" alt="gallery"/>
-                                </div>
-                                <div className="w-1/2 lg:w-1/3 xl:w-1/4 p-2">
-                                    <img
-                                        src="https://media.discordapp.net/attachments/771547475969835008/778300988867870740/Capture.PNG"
-                                        className="w-full h-auto border-4 border-gray-700" alt="gallery"/>
-                                </div>
-                                <div className="w-1/2 lg:w-1/3 xl:w-1/4 p-2">
-                                    <img
-                                        src="https://cdn.discordapp.com/attachments/733501465989218395/777388145528012820/4e05da1e2504b43946eec836335dd5b2.jpg"
-                                        className="w-full h-auto border-4 border-gray-700" alt="gallery"/>
-                                </div>
-                                <div className="w-1/2 lg:w-1/3 xl:w-1/4 p-2">
-                                    <img
-                                        src="https://cdn.discordapp.com/attachments/733501465989218395/769826743968071700/bDcpFo9KL.gif"
-                                        className="w-full h-auto border-4 border-gray-700" alt="gallery"/>
-                                </div>
-                                <div className="w-1/2 lg:w-1/3 xl:w-1/4 p-2">
-                                    <img src="https://i.imgur.com/MWQpBqi.jpg"
-                                         className="w-full h-auto border-4 border-gray-700" alt="gallery"/>
-                                </div>
-                                <div className="w-1/2 lg:w-1/3 xl:w-1/4 p-2">
-                                    <img
-                                        src="https://cdn.discordapp.com/attachments/733501465989218395/752461375229657088/lO6cNqwSIw.gif"
-                                        className="w-full h-auto border-4 border-gray-700" alt="gallery"/>
-                                </div>
-                                <div className="w-1/2 lg:w-1/3 xl:w-1/4 p-2">
-                                    <img src="https://i.imgur.com/i6wDxqn.jpg"
-                                         className="w-full h-auto border-4 border-gray-700" alt="gallery"/>
-                                </div>
-                                <div className="w-1/2 lg:w-1/3 xl:w-1/4 p-2">
-                                    <img
-                                        src="https://cdn.discordapp.com/attachments/733501465989218395/733505142225109022/unknown.png"
-                                        className="w-full h-auto border-4 border-gray-700" alt="gallery"/>
-                                </div>
-                                <div className="w-1/2 lg:w-1/3 xl:w-1/4 p-2">
-                                    <img
-                                        src="https://cdn.discordapp.com/attachments/733501465989218395/739752763247951932/XLXrX3V.png"
-                                        className="w-full h-auto border-4 border-gray-700" alt="gallery"/>
-                                </div>
+                                {gallery.map((item) => (
+                                    <div className="w-1/2 lg:w-1/3 xl:w-1/4 p-2">
+                                        <img src={item.source} className="w-full h-auto border-4 border-gray-700" alt={item.name} />
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     </div>
