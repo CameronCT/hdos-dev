@@ -94,15 +94,16 @@ class Landing extends Component {
                             </div>
                         </div>
                     </div>
-                    <Fade>
-                        <div className="absolute w-full bottom-0 pb-10 text-center uppercase tracking-widest text-lg">
+                    <div className="absolute w-full bottom-0 pb-10 text-center uppercase tracking-widest text-lg">
+                        <Fade>
                             <a href="#apply"
                                className="text-gray-400 hover:text-gray-500 transition ease-in-out duration-200">
                                 <i className="fas fa-angle-double-down mr-2" />
                                 <span className="font-semibold">Scroll to Apply</span>
                             </a>
-                        </div>
-                    </Fade>
+                        </Fade>
+                    </div>
+
                 </div>
 
                 <div id="apply" className="bg-gray-900 bg-opacity-50">
